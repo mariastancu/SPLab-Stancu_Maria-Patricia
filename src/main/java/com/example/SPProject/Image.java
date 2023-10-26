@@ -1,18 +1,24 @@
 package com.example.SPProject;
 
-
 import lombok.Data;
+
+import java.util.concurrent.TimeUnit;
 
 @Data
 public class Image implements Element{
-    private String url;
+    private String imageName;
 
-    public Image(String url) {
-        this.url = url;
+    public Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void print() {
-        System.out.println("Image with url: " + url);
+        System.out.println("Image with name: " + imageName);
     }
 
     @Override
