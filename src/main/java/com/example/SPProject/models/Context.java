@@ -1,4 +1,4 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
 
 public class Context {
     private int pageWidth=156;

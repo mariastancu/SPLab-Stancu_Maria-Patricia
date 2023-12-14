@@ -1,4 +1,6 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
+
+import com.example.SPProject.services.Visitor;
 
 public class ImageProxy implements Element, Picture{
     String url;
@@ -28,6 +30,11 @@ public class ImageProxy implements Element, Picture{
     @Override
     public Element get(int id) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitImageProxy(this);
     }
 
     @Override

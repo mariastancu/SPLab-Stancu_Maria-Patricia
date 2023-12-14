@@ -1,4 +1,7 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
+
+import com.example.SPProject.models.Element;
+import com.example.SPProject.services.Visitor;
 
 import java.util.ArrayList;
 
@@ -31,5 +34,10 @@ public class Section implements Element{
     @Override
     public Element get(int id) {
         return elements.get(id);
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
     }
 }

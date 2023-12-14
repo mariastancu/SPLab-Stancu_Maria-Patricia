@@ -1,5 +1,7 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
 
+import com.example.SPProject.services.AlignStrategy;
+import com.example.SPProject.services.Visitor;
 import lombok.Data;
 
 @Data
@@ -50,6 +52,11 @@ public class Paragraph implements Element{
     @Override
     public Element get(int id) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitParagraph(this);
     }
 
 }
