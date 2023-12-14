@@ -1,4 +1,4 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
 
 public interface Picture {
     String url();

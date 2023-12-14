@@ -1,6 +1,4 @@
-package com.example.SPProject;
-
-import lombok.Data;
+package com.example.SPProject.models;
 
 import java.util.ArrayList;
 

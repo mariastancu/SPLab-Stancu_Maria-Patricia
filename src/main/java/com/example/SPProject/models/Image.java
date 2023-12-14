@@ -1,5 +1,6 @@
-package com.example.SPProject;
+package com.example.SPProject.models;
 
+import com.example.SPProject.services.Visitor;
 import lombok.Data;
 
 import java.util.concurrent.TimeUnit;
@@ -35,6 +36,11 @@ public class Image implements Element, Picture{
     @Override
     public Element get(int id) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitImage(this);
     }
 
     @Override

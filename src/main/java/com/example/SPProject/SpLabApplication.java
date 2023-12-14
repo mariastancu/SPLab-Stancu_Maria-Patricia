@@ -1,11 +1,10 @@
 package com.example.SPProject;
-import com.example.SPProject.example.ClientComponent;
-import com.example.SPProject.example.SingletonComponent;
-import com.example.SPProject.example.TransientComponent;
+import com.example.SPProject.models.Paragraph;
+import com.example.SPProject.models.Section;
+import com.example.SPProject.services.AlignCenter;
+import com.example.SPProject.services.AlignLeft;
+import com.example.SPProject.services.AlignRight;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpLabApplication {
