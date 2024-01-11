@@ -1,10 +1,10 @@
 package com.example.SPProject.models;
 
-import com.example.SPProject.models.Element;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.example.SPProject.services.Visitor;
-
 import java.util.ArrayList;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Section implements Element{
     private String title;
     private ArrayList<Element> elements=new ArrayList<>();
