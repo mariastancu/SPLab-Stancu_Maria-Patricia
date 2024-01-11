@@ -1,14 +1,17 @@
 package com.example.SPProject.models;
-
-import com.example.SPProject.services.Visitor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import com.example.SPProject.services.Visitor;
 
 import java.util.concurrent.TimeUnit;
 
 @Data
-public class Image implements Element, Picture{
+@Entity
+public class Image extends BaseElement implements Picture{
+    @Id
+    private int id;
     private String imageName;
-
 
     public Image(String name) {
         imageName = name;
@@ -17,6 +20,10 @@ public class Image implements Element, Picture{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public Image() {
+
     }
 
     public void print() {
@@ -47,4 +54,5 @@ public class Image implements Element, Picture{
     public String url() {
         return null;
     }
+
 }

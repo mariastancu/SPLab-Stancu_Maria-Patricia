@@ -1,14 +1,28 @@
 package com.example.SPProject.models;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
+import lombok.Data;
 import com.example.SPProject.services.Visitor;
 
-public class ImageProxy implements Element, Picture{
-    String url;
+@Data
+@Entity
+public class ImageProxy extends BaseElement implements  Picture{
+    @Id
+    private int id;
+    private String url;
+    @Transient
     private Image realImage;
 
     public ImageProxy(String url) {
         this.url = url;
         this.realImage=null;
+    }
+
+    public ImageProxy() {
+
     }
 
     @Override

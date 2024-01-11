@@ -1,16 +1,24 @@
 package com.example.SPProject.models;
 
 
-import com.example.SPProject.models.Element;
-import com.example.SPProject.services.Visitor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import com.example.SPProject.services.Visitor;
 
 @Data
-public class Table implements Element{
+@Entity
+public class Table extends BaseElement{
+    @Id
+    private int id;
     private String something;
 
     public Table(String something) {
         this.something = something;
+    }
+
+    public Table() {
+
     }
 
     public void print() {

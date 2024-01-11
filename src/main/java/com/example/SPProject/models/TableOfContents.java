@@ -1,9 +1,16 @@
 package com.example.SPProject.models;
 
-import com.example.SPProject.models.Element;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
 import com.example.SPProject.services.Visitor;
 
+
+@Data
+@Entity
 public class TableOfContents implements Element{
+    @Id
+    private int id;
     private String something;
 
     @Override
